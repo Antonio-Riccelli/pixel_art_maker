@@ -1,39 +1,33 @@
-var colorInput = document.getElementById("colorPicker");
-var selectTable = document.getElementById("pixelCanvas");
-var formInput = document.getElementById("sizePicker");
-var heightInput = document.getElementById("inputHeight");
-var widthInput = document.getElementById("inputWidth");
+let colorInput = document.getElementById("colorPicker");
+let selectTable = document.getElementById("pixelCanvas");
+let formInput = document.getElementById("sizePicker");
+let heightInput = document.getElementById("inputHeight");
+let widthInput = document.getElementById("inputWidth");
 
 
 formInput.addEventListener("submit", function (e) {
     selectTable.innerHTML = "";
-
     e.preventDefault();
-
-    var heightInput = document.getElementById("inputHeight");
-    var widthInput = document.getElementById("inputWeight");
-
-
+    let heightInput = document.getElementById("inputHeight");
+    let widthInput = document.getElementById("inputWeight");
     makeGrid(heightInput, widthInput);
     addColor(colorInput);
-
 });
 
 
 function makeGrid(height, width) {
-
-    for (var i = 0; i < heightInput.value; i++) {
-        var row = selectTable.insertRow();
-        for (var n = 0; n < widthInput.value; n++) {
-            var cell = row.insertCell();
+    for (let i = 0; i < heightInput.value; i++) {
+        let row = selectTable.insertRow();
+        for (let n = 0; n < widthInput.value; n++) {
+            let cell = row.insertCell();
         }
     }
 }
 
 function addColor(color) {
-    var allCells = document.querySelectorAll("td");
-    var isDrawing = false;
-    for (var i = 0; i < allCells.length; i++) {
+    let allCells = document.querySelectorAll("td");
+    let isDrawing = false;
+    for (let i = 0; i < allCells.length; i++) {
         allCells[i].addEventListener("mousedown", function (e) {
             isDrawing = true;
             e.target.style.backgroundColor = colorInput.value;
@@ -48,8 +42,6 @@ function addColor(color) {
         allCells[i].addEventListener("mouseup", function (e) {
             if (isDrawing === true) {
                 isDrawing = false;
-              
-                
             }
         })
     }
