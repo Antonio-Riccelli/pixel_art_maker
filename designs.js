@@ -1,4 +1,4 @@
-var colorInput = document.getElementById("colorPicker").value;
+var colorInput = document.getElementById("colorPicker");
 var selectTable = document.getElementById("pixelCanvas");
 var formInput = document.getElementById("sizePicker");
 var heightInput = document.getElementById("inputHeight");
@@ -32,8 +32,8 @@ function makeGrid(height, width) {
 function addColor(color) {
 var allCells = document.querySelectorAll("td");
 for (var i = 0; i < allCells; i++) {
-    allCells[i].addEventListener("click", function(e) {
-        allCells[i].style.backgroundColor = colorInput.value;
+    allCells[i].addEventListener("mousedown", function(e) {
+        e.target.style.backgroundColor = colorInput;
     })
  }
 }
