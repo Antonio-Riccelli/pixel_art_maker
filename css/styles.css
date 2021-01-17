@@ -1,0 +1,57 @@
+
+
+body {
+    text-align: center;
+    font-family: 'VT323';
+    margin-bottom: 40px;
+    /* background-color: blanchedalmond; */
+    /* background-image: url('http://www.technocrazed.com/wp-content/uploads/2015/12/Wood-Wallpaper-Background-27.jpg'); */
+    background-image: url('https://wallpapercave.com/wp/wp1933975.png');
+}
+
+h1 {
+    font-family: 'VT323';
+    font-size: 70px;
+    margin: 0.2em;
+    color: midnightblue;
+    
+}
+
+h2 {
+    margin: 1em 0 0.25em;
+    color: midnightblue;
+    margin-bottom: 1em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: white;
+}
+
+tr {
+    height: 10px;
+}
+
+td {
+    width: 10px;
+}
+
+input[type=number] {
+    width: 6em;
+}
+
+audio {
+    margin-top: 30px;
+
+}
