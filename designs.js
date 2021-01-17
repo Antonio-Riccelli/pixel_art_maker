@@ -16,6 +16,7 @@ formInput.addEventListener("submit", function (e) {
 
     makeGrid(heightInput, widthInput);
     addColor(colorInput);
+
 });
 
 
@@ -30,13 +31,26 @@ function makeGrid(height, width) {
 }
 
 function addColor(color) {
-var allCells = document.querySelectorAll("td");
-for (var i = 0; i < allCells; i++) {
-    allCells[i].addEventListener("mousedown", function(e) {
-        e.target.style.backgroundColor = colorInput;
-    })
- }
-}
+    var allCells = document.querySelectorAll("td");
+    var isDrawing = false;
+    for (var i = 0; i < allCells.length; i++) {
+        allCells[i].addEventListener("mousedown", function (e) {
+            isDrawing = true;
+            e.target.style.backgroundColor = colorInput.value;
+        });
 
+        allCells[i].addEventListener("mousemove", function (e) {
+            if (isDrawing === true) {
+                e.target.style.backgroundColor = colorInput.value;
+            }
+        });
 
-
+        allCells[i].addEventListener("mouseup", function (e) {
+            if (isDrawing === true) {
+                isDrawing = false;
+              
+                
+            }
+        })
+    }
+};
