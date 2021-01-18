@@ -7,6 +7,8 @@ body {
     /* background-color: blanchedalmond; */
     /* background-image: url('http://www.technocrazed.com/wp-content/uploads/2015/12/Wood-Wallpaper-Background-27.jpg'); */
     background-image: url('https://wallpapercave.com/wp/wp1933975.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {

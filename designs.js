@@ -1,9 +1,9 @@
 // * Initial variables assignments, names are self-explanatory
-let colorInput = document.getElementById("colorPicker");
-let selectTable = document.getElementById("pixelCanvas");
-let formInput = document.getElementById("sizePicker");
-let heightInput = document.getElementById("inputHeight");
-let widthInput = document.getElementById("inputWidth");
+const colorInput = document.getElementById("colorPicker");
+const selectTable = document.getElementById("pixelCanvas");
+const formInput = document.getElementById("sizePicker");
+const heightInput = document.getElementById("inputHeight");
+const widthInput = document.getElementById("inputWidth");
 
 /*
 * @description collects form input information, passes it to functions to create table and assign color
@@ -25,9 +25,9 @@ formInput.addEventListener("submit", function (e) {
 */
 function makeGrid(height, width) {
     for (let i = 0; i < heightInput.value; i++) {
-        let row = selectTable.insertRow();
+        const row = selectTable.insertRow();
         for (let n = 0; n < widthInput.value; n++) {
-            let cell = row.insertCell();
+            const cell = row.insertCell();
         }
     }
 }
@@ -37,7 +37,7 @@ function makeGrid(height, width) {
 * @param {value} color
 */
 function addColor(color) {
-    let allCells = document.querySelectorAll("td");
+    const allCells = document.querySelectorAll("td");
     let isDrawing = false;
     for (let i = 0; i < allCells.length; i++) {
         allCells[i].addEventListener("mousedown", function (e) {
