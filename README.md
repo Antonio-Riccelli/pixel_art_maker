@@ -4,11 +4,6 @@ A Pixel Art Maker created using HTML, CSS and JS.
 
 This was my first experiment in understanding how to modify the DOM using JS. 
 
-## Table of Contents
-
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
 ## Instructions
 
 To get started, open `designs.js` and start building out the app's functionality.
