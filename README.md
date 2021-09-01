@@ -1,4 +1,4 @@
-# Pixel Art Maker Project
+# Pixel Art Maker
 
 See it [here](https://antonio-riccelli.github.io/pixel_art_maker/)
 
